@@ -120,8 +120,8 @@ public class MainActivity extends ActionBarActivity {
                     String text = result.get(0);
 
                     txtSpeechInput.setText(text);
-                    text.replace();
-                    String urlString= "https://slack.com/api/chat.postMessage?token=xoxp-4042582319-4066116197-6660653269-1f9854&channel=%23random&text="+result.get(0);// URL to call
+                    text = text.replace(" ","%20");
+                    String urlString= "https://slack.com/api/chat.postMessage?token=xoxp-6655470739-6655455825-6659994513-da7bed&channel=%23random&text="+text;// URL to call
 
                         new CallAPI(urlString).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
